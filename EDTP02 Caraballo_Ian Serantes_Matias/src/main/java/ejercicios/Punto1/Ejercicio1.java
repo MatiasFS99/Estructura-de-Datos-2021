@@ -1,6 +1,7 @@
-package ejercicios;
+package ejercicios.Punto1;
 import java.util.*;
-import ejercicios.packejercicio1.Signos;
+
+import ejercicios.Punto1.packejercicio1.Signos;
 
 public class Ejercicio1 {
     static ArrayList<Signos> Tipos = new ArrayList<Signos>();

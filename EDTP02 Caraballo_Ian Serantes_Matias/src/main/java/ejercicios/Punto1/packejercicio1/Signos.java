@@ -1,4 +1,4 @@
-package ejercicios.packejercicio1;
+package ejercicios.Punto1.packejercicio1;
 import java.util.Date;
 
 public class Signos {

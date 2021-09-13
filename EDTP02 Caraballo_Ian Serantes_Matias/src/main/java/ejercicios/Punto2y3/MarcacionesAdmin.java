@@ -1,4 +1,4 @@
-package ejercicios.Punto2;
+package ejercicios.Punto2y3;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -19,15 +19,15 @@ public class MarcacionesAdmin extends MarcacionesAdminAbstract {
         List<Empleado> respuesta = new ArrayList();
 
         for (int i = 0; i < marcacionesList.size(); i++) {
-            int z = 0;
-            int x = i;
-            while (x > 0) {
-                if (marcacionesList.get(i).getEmpleado().equals(marcacionesList.get(x - 1).getEmpleado())) {
-                    z++;
+            int b = 0;
+            int a = i;
+            while (a > 0) {
+                if (marcacionesList.get(i).getEmpleado().equals(marcacionesList.get(a - 1).getEmpleado())) {
+                    b++;
                 }
-                x--;
+                a--;
             }
-            if (z == 0) {
+            if (b == 0) {
                 respuesta.add(marcacionesList.get(i).getEmpleado());
             }
         }
@@ -48,9 +48,9 @@ public class MarcacionesAdmin extends MarcacionesAdminAbstract {
     public List<Marcacion> filtroPorEmpleado(Empleado empleado) {
         List<Marcacion> respuesta = new ArrayList();
 
-        for (Marcacion o : marcacionesList) {
-            if (o.getEmpleado().equals(empleado)) {
-                respuesta.add(o);
+        for (Marcacion resul : marcacionesList) {
+            if (resul.getEmpleado().equals(empleado)) {
+                respuesta.add(resul);
             }
         }
 
@@ -67,9 +67,9 @@ public class MarcacionesAdmin extends MarcacionesAdminAbstract {
     public List<Marcacion> filtroPorTipo(MarcacionTipo tipo) {
         List<Marcacion> respuesta = new ArrayList();
 
-        for (Marcacion o : marcacionesList) {
-            if (o.getTipo() == tipo) {
-                respuesta.add(o);
+        for (Marcacion resul : marcacionesList) {
+            if (resul.getTipo() == tipo) {
+                respuesta.add(resul);
             }
         }
 
@@ -85,11 +85,11 @@ public class MarcacionesAdmin extends MarcacionesAdminAbstract {
     public List<Marcacion> llegaronTarde() {
         List<Marcacion> respuesta = new ArrayList();
 
-        for (Marcacion o : marcacionesList) {
-            if (o.getFechaHora().getHora().isAfter(o.getEmpleado().getOficina().getHoraEntrada())
-                && o.getFechaHora().getHora().isBefore(o.getEmpleado().getOficina().getHoraSalida())) {
+        for (Marcacion resul : marcacionesList) {
+            if (resul.getFechaHora().getHora().isAfter(resul.getEmpleado().getOficina().getHoraEntrada())
+                && resul.getFechaHora().getHora().isBefore(resul.getEmpleado().getOficina().getHoraSalida())) {
 
-                respuesta.add(o);
+                respuesta.add(resul);
 
             }
         }
@@ -125,9 +125,9 @@ public class MarcacionesAdmin extends MarcacionesAdminAbstract {
     public String toString() {
         String resultado = "";
 
-        for (Marcacion o : marcacionesList) {
+        for (Marcacion resul : marcacionesList) {
 
-            resultado += o.toString() + '\n';
+            resultado += resul.toString() + '\n';
         }
 
         return resultado;

@@ -1,5 +1,5 @@
 
-package ejercicios.Punto3;
+package ejercicios.Punto4;
 
 public class Cliente {
 

@@ -1,4 +1,4 @@
-package ejercicios.Punto2;
+package ejercicios.Punto2y3;
 public class Marcacion implements Comparable<Marcacion> {
 
     private int numero;
@@ -75,6 +75,7 @@ public class Marcacion implements Comparable<Marcacion> {
         return "Marcacion{" + "numero=" + numero + ", empleado=" + empleado + "fechaHora=" + fechaHora + ", tipo=" + tipo + '}';
     }
 
+    @Override
     public int compareTo(Marcacion o) {
         int res = this.fechaHora.getFecha().compareTo(o.getFechaHora().getFecha());
         return res;

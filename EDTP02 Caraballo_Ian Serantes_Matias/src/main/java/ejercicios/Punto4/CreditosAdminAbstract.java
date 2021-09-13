@@ -1,4 +1,4 @@
-package ejercicios.Punto3;
+package ejercicios.Punto4;
 
 import java.util.ArrayList;
 import java.util.Comparator;

@@ -1,4 +1,4 @@
-package ejercicios.Punto3;
+package ejercicios.Punto4;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

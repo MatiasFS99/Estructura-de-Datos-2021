@@ -1,10 +1,14 @@
-package ejercicios.Punto3;
+package ejercicios.Punto4;
 
 public class Sucursal {
 
     private String sucursal;
 
     public Sucursal(String sucursal) {
+        if (sucursal == null) {
+            throw new IllegalArgumentException("Sucursal no puede ser null");
+        }
+        
         this.sucursal = sucursal;
     }
 

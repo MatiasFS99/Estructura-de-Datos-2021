@@ -1,4 +1,4 @@
-package ejercicios.Punto3;
+package ejercicios.Punto4;
 
 import java.math.BigDecimal;
 
@@ -13,6 +13,29 @@ public class CreditoTipo {
     private BigDecimal tasaDeInteres;
 
     public CreditoTipo(String descripcion, BigDecimal montoMinimo, BigDecimal montoMaximo, int aniosMinimo, int aniosMaximo, ClienteTipoEnum clienteTipo, BigDecimal tasaDeInteres) {
+        if (descripcion == null) {
+            throw new IllegalArgumentException("Descripcion no puede ser 0");
+        }
+
+        if (montoMinimo.equals(0)) {
+            throw new IllegalArgumentException("montoMinimo no puede ser 0");
+        }
+
+        if (montoMaximo.equals(0)) {
+            throw new IllegalArgumentException("montoMaximo no puede ser 0");
+        }
+
+        if (aniosMinimo == 0) {
+            throw new IllegalArgumentException("aniosMinimo no puede ser 0");
+        }
+        if (aniosMaximo == 0) {
+            throw new IllegalArgumentException("aniosMaximo no puede ser 0");
+        }
+
+        if (tasaDeInteres.equals(0)) {
+            throw new IllegalArgumentException("tasaDeInteres no puede ser 0");
+        }
+
         this.descripcion = descripcion;
         this.montoMinimo = montoMinimo;
         this.montoMaximo = montoMaximo;

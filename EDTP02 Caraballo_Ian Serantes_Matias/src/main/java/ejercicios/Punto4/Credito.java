@@ -1,4 +1,4 @@
-package ejercicios.Punto3;
+package ejercicios.Punto4;
 
 import java.math.BigDecimal;
 
@@ -13,6 +13,15 @@ public class Credito implements Comparable<Credito> {
     private BigDecimal totalADevolver;
 
     public Credito(int numero, CreditoTipo tipo, Cliente cliente, BigDecimal montoAcordado, int plazo, Sucursal sucursal) {
+       if(numero == 0){
+            throw new IllegalArgumentException("numero no puede ser 0");
+        }
+        
+        if(montoAcordado.equals(0)){
+            throw new IllegalArgumentException("montoAcordado no puede ser 0");
+        }
+        
+       
         this.numero = numero;
         this.tipo = tipo;
         this.cliente = cliente;
@@ -136,6 +145,7 @@ public class Credito implements Comparable<Credito> {
         return "Credito{" + "numero=" + numero + ", tipo=" + tipo + ", cliente=" + cliente + ", montoAcordado=" + montoAcordado + ", plazo=" + plazo + ", sucursal=" + sucursal + ", totalADevolver=" + totalADevolver + '}';
     }
 
+    @Override
     public int compareTo(Credito o) {
         return Integer.compare(this.numero,o.getNumero());
     }

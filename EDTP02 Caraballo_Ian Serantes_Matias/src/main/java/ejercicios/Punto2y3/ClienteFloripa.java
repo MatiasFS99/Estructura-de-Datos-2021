@@ -1,4 +1,4 @@
-package ejercicios.Punto2;
+package ejercicios.Punto2y3;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

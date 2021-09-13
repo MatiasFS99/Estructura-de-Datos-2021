@@ -1,4 +1,4 @@
-package ejercicios.Punto3;
+package ejercicios.Punto4;
 
 public enum ClienteTipoEnum {
     PERSONA("Persona"),
@@ -8,6 +8,9 @@ public enum ClienteTipoEnum {
     private String Descripcion;
 
     private ClienteTipoEnum(String Descripcion) {
+        if(Descripcion == null){
+            throw new IllegalArgumentException("Descripcion no puede ser null");
+        }
         this.Descripcion = Descripcion;
     }
 
